@@ -28,6 +28,9 @@ function calcular() {
         .join('')}</div>`;
     const total = roundTheResult(lines.filter(isNumber).reduce((a, b) => a + b, 0));
     resultadoElemento.innerHTML += `<div id="total">Total: ${total}</div>`;
+    //savel total to clipboard on click
+    document.getElementById('total')?.addEventListener('click', () => {
+        navigator.clipboard.writeText(total.toString());
+    });
 }
-calculadoraElemento.addEventListener('input', calcular);
 //# sourceMappingURL=script.js.map
