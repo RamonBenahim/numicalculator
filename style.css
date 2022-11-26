@@ -25,7 +25,7 @@ main {
   font-family: "IMB Plex Mono", monospace;
 }
 
-#calculador {
+#calculadora {
   resize: none;
 }
 
@@ -35,5 +35,12 @@ main {
 }
 
 #resultado {
-  color: #2e1
+  color: #2e1;
+  display: grid;
+  text-align: right;
+}
+
+#total {
+  align-self: end;
+  margin-top: 1.25rem;
 }
