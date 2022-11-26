@@ -1,0 +1,9 @@
+body {
+  margin: 2rem;
+  background: #000;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
