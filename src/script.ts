@@ -23,6 +23,9 @@ function isNumber(value: unknown): value is number {
 }
 
 function calcular() {
+  //save calculadora value to localStorage
+  localStorage.setItem('calculadora', calculadoraElemento.value);
+
   const lines = calculadoraElemento.value.split(/\r?\n/).map(evaluate)
 
   resultadoElemento.innerHTML = `<div>${lines.map(l => `<div>${isNumber(l) 
@@ -39,6 +42,12 @@ function calcular() {
       navigator.clipboard.writeText(total.toString())
     })
 }
+
+    //load calculadora value from localStorage
+    calculadoraElemento.value = localStorage.getItem('calculadora') || '';
+
+    calculadoraElemento.addEventListener('input', calcular)
+    calcular()
 
 
 
