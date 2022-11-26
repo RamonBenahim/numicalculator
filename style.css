@@ -29,7 +29,6 @@ main {
   resize: none;
 }
 
-/* remove focus from calculadora */
 #calculadora:focus {
   outline: none;
 }
