@@ -23,7 +23,6 @@ function isNumber(value: unknown): value is number {
 }
 
 function calcular() {
-  //save calculadora value to localStorage
   localStorage.setItem('calculadora', calculadoraElemento.value);
 
   const lines = calculadoraElemento.value.split(/\r?\n/).map(evaluate)
@@ -37,13 +36,11 @@ function calcular() {
 
     resultadoElemento.innerHTML += `<div id="total">Total: ${total}</div>`
 
-    //savel total to clipboard on click
     document.getElementById('total')?.addEventListener('click', () => {
       navigator.clipboard.writeText(total.toString())
     })
 }
 
-    //load calculadora value from localStorage
     calculadoraElemento.value = localStorage.getItem('calculadora') || '';
 
     calculadoraElemento.addEventListener('input', calcular)
