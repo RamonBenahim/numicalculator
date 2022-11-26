@@ -1,4 +1,4 @@
-A simple copy of the muni calculator.
+A simple copy of the muni calculator (https://numi.app/).
 
 You can check more at: https://ramonbenahim.github.io/numicalculator/
 
