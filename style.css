@@ -28,3 +28,12 @@ main {
 #calculador {
   resize: none;
 }
+
+/* remove focus from calculadora */
+#calculadora:focus {
+  outline: none;
+}
+
+#resultado {
+  color: #2e1
+}
